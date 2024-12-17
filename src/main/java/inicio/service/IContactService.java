@@ -1,6 +1,8 @@
 package inicio.service;
 
-import inicio.entities.Contact;
+import inicio.persistence.entities.Contact;
+import inicio.service.dto.in.ContactSearchCriteria;
+import inicio.service.dto.out.ContactDTO;
 
 import java.util.List;
 
@@ -8,15 +10,11 @@ public interface IContactService {
 
     void addContact(Contact contact);
 
-    Contact getContactByEmail(String email);
+    ContactDTO getContactByPhoneNumber(String phoneNumber);
 
-    Contact getContactByID(int id);
+    void deleteContactByPhoneNumber(String phoneNumber);
 
-    void deleteContactByEmail(String email);
+    List<ContactDTO> getAllContacts(ContactSearchCriteria searchCriteria);
 
-    List<Contact> getAllContacts();
-
-    void deleteContactByID(int id);
-
-    void updateContact(int id, Contact contact);
+    void updateContact(Long id, Contact contact);
 }

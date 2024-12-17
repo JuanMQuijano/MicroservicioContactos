@@ -3,7 +3,7 @@ package inicio;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"inicio/repository", "inicio/entities", "inicio/service", "inicio/controller"})
+@SpringBootApplication
 public class MicroservicioContactosApplication {
 
 	public static void main(String[] args) {
